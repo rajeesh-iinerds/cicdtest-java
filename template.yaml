@@ -5,8 +5,8 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: cicdTestJava
-      Handler: com.amazonaws.lambda.GetDistributorsList::handleRequest
-      Runtime: java.8
+      Handler: com.amazonaws.lambda.getdistributorlist.GetDistributorsList
+      Runtime: java8
       Environment:
         Variables: 
           S3_BUCKET: cicdsample.appcohesion.io
