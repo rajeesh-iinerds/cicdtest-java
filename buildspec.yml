@@ -3,7 +3,7 @@ phases:
   install:
     commands:
       - echo Build completed on `date`
-      - mvn package
+      - mvn clean package -DskipTests
       - aws cloudformation package --template-file template.yaml --s3-bucket cicdtest.appcohesion.io 
                                    --output-template-file outtemplate.yaml
       - sed -i '/DefinitionUri/d' template.yaml 
