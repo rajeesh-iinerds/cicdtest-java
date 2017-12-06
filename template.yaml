@@ -4,9 +4,9 @@ Resources:
   CICDApiGatewayPreTestFunction:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: cicdCreateStage
-      Handler: index.handler
-      Runtime: nodejs6.10
+      FunctionName: cicdTestJava
+      Handler: com.amazonaws.lambda.GetDistributorsList::handleRequest
+      Runtime: java.8
       Environment:
         Variables: 
           S3_BUCKET: cicdsample.appcohesion.io
