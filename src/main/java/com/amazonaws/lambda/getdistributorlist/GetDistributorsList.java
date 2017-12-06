@@ -13,7 +13,7 @@ public class GetDistributorsList implements RequestHandler<Object, String> {
     	context.getLogger().log("Input: " + input);
         try{        	
         	context.getLogger().log("DEBUG::From production");
-        	JSONObject parameters=new JSONObject(input.toString());
+        	JSONObject parameters = new JSONObject(input.toString());
         	return APIUtil.getDistributorsList(parameters).toString();
         }
         catch(Exception e){
